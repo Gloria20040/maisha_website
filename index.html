@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maisha Laundry</title>
+    <style>
+        /* === BASE STYLES === */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f7fa;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* === HEADER === */
+        header {
+            background-color: #007BA7;
+            color: #fff;
+            text-align: center;
+            padding: 40px 10px 60px; /* extra bottom padding for dissolve */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            max-width: 200px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0,123,167,0.6);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0,123,167,0.7);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0.3rem 0;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* === CONTAINER & SECTIONS === */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #007BA7;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* === SERVICE GRID === */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fdfdfd;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card img {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            margin: 12px;
+            font-size: 1.2rem;
+            color: #007BA7;
+            text-align: center;
+        }
+
+        /* === WHATSAPP BUTTON === */
+        .wa-btn {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .wa-btn:hover {
+            background: #1da851;
+            transform: scale(1.05);
+        }
+
+        .wa-section {
+            text-align: center;
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007BA7;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        /* === RESPONSIVE TEXT === */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-card img {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logonew.png" alt="Maisha Laundry Logo">
+        </div>
+        <h1>Maisha Laundry</h1>
+        <p><i>Bringing life to your clothes</i></p>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section class="section">
+            <h2>About Us</h2>
+            <p>
+                At <strong>Maisha Laundry</strong>, we give your clothes the premium care they deserve. 
+                Fresh, clean, and perfectly handled. We offer fast pickup & delivery with reliable quality.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section">
+            <h2>Our Services</h2>
+            <div class="grid">
+                <div class="service-card">
+                    <img src="images/wash.jpg" alt="Washing">
+                    <h3>Washing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/iron.jpg" alt="Ironing">
+                    <h3>Ironing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/fold.jpg" alt="Folding">
+                    <h3>Folding</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/steam.jpg" alt="Steam Cleaning">
+                    <h3>Steam Cleaning</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/carpet.jpg" alt="Carpet Cleaning">
+                    <h3>Carpet Cleaning</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/duvet.jpg" alt="Duvets & Blankets">
+                    <h3>Duvets & Blankets</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/curtain.jpg" alt="Curtains">
+                    <h3>Curtains</h3>
+                </div>
+                <div class="service-card">
+                    <img src="images/kids.jpg" alt="Kids Clothing">
+                    <h3>Kids Clothing</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Booking Section -->
+        <section class="section wa-section">
+            <h2>Book via WhatsApp or Check Our Cart</h2>
+            <a class="wa-btn" href="https://wa.me/256780603561?text=Hello%20Maisha%20Laundry,%20I%20would%20like%20to%20book%20a%20service.">
+                Chat on WhatsApp
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Maisha Laundry • Bringing life to your clothes
+    </footer>
+
+</body>
+</html>
